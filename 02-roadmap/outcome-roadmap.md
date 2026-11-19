@@ -1,25 +1,40 @@
-# Outcome Roadmap & Trade-off Memo
+# Outcome Roadmap & Trade-off Memo: Meridian Foundations
 
 > Module 2 · Turn Your Strategy into an Outcome Roadmap
 
 ## 1. Trade-off memo
 
-> **Rock 1:** _____
+> **Rock 1:** Add a photo markup and annotation tool for field teams (supports KR1): Gives foremen a faster, clearer way to flag issues in a photo than texting it, so more field updates go through Meridian instead of the group text
 >
-> **Rock 2:** _____
+> **Rock 2:** Simplify the daily log: reduce from 14 required fields to 4 (supports KR3): Cutting required fields toward zero lets the log build itself from what the foreman already captures, which raises the share of logs the PM accepts without edits. Moving from 14 fields to 4 is the first step, not the end state
 >
-> **Rock 3:** _____
+> **Rock 3:** Enable push notifications for schedule changes (supports KR1): Schedule-change alerts give foremen a daily reason to open the app. Once they’re in, capture is one tap away, which moves updates out of the group text.
 >
-> **Hard no 1:** _____
+> **Hard no 1:** Migrate the data model to support multi-project dashboards: This is back-end rebuild work, and the strategy has to stay additive to the core platform. It does nothing this quarter for channel share or tag accuracy. We’ll revisit it only if engineering shows that auto-tagging to project and cost code can’t work without it.
 >
-> **Hard no 2:** _____
+> **Hard no 2:** Build an executive reporting dashboard with custom KPIs: It serves the office, not the field, and this quarter’s bet is that a trustworthy field feed comes first. Better field data is what makes executive reporting worth building. For the two at-risk renewals, customer success will cover the gap with existing reporting and exports, and we’ll revisit once pilot data exists.
 >
-> **Hard no 3:** _____
+> **Hard no 3:** Add a time-tracking module: It adds structured data entry for foremen, which conflicts with our no-forms rule, and it pulls capacity away from the core bet. We’ll revisit once field capture is proven and we can add it without adding friction.
 
 ## 2. Outcome roadmap
 
 | Horizon | Outcome / bet | Owning team(s) | Success signal |
 |---|---|---|---|
-| Now (0 to 3 mo) | _____ | _____ | _____ |
-| Next (3 to 6 mo) | _____ | _____ | _____ |
-| Later (6 to 12 mo) | _____ | _____ | _____ |
+| **Now**<br>(0 to 3 mo) | **This quarter's problem:** Foremen and superintendents run the job from phone photos and group texts, not Meridian. The office waits on field updates it can't trust, and mid-market customers are leaving for simpler mobile tools.<br><br>**1. Flagging issues**<br>Foremen and superintendents text photos of problems to the group chat because it's faster than Meridian. We bet that letting them mark up a photo and send it in one step will make Meridian the faster way to flag an issue, lifting the share of a site's field updates sent through Meridian from [baseline] to [X]% by month 3.<br><br>**2. Daily log**<br>Foremen skip the daily log because 14 required fields cost more time than it's worth, so PMs get late, incomplete logs. We bet that cutting it to 4 required fields will get foremen to finish it every day, raising on-time completion to [X]% and PM no-edit acceptance to [Y]%.<br><br>**3. Daily return**<br>Foremen rarely open Meridian, so nothing they do on site reaches the office through it. We bet that schedule-change alerts will bring them in on most working days, with at least [X]% of alert opens leading to a capture in the same session. | • Product<br>• Mobile engineering<br>• UX research (ride-alongs, 4-week test)<br>• Customer success (pilot sites) | **Win signals**<br>• Share of field updates sent through Meridian reaches [X]%<br>• Log completion and PM no-edit acceptance reach targets<br>• Alert-to-capture conversion reaches [X]%<br><br>**Kill signals**<br>• Markup used on under [Y]% of photos after 6 weeks<br>• Log completion flat after fields are cut<br>• Alert conversion under [X]% after 6 weeks<br><br>**Guardrail:** zero required fields added to the field client |
+| **Next**<br>(3 to 6 mo) | **1. Trusted tags**<br>We bet that offline-first capture auto-tagged to project, site and cost code will make field updates reliable enough for PMs to act on without chasing, for PMs and finance. Start with project and site.<br>*Why next: largest build, needs the 4-week test results.*<br><br>**2. Form factor**<br>We bet we can meet the offline and low-friction bar inside the existing client. A separate foreman app is built only if the test says we can't.<br>*Why next: needs the requirements from the test first.*<br><br>**3. Self-writing log**<br>We bet that a log with zero required fields, built from captures, will be accepted by PMs as is.<br>*Why next: depends on auto-tagging and enough capture data.*<br><br>**4. Procore sync** *(commitment, not a bet)*<br>Restore the integration for 2 clients to protect those accounts.<br>*Why next: owed to customers, but not part of the field bet.*<br><br>**5. Compliance checklists**<br>We bet that checklists generated from captures will satisfy the 3 requesting clients without adding forms for foremen.<br>*Why next: depends on tagging and the log working first.* | • Mobile engineering and product (capture, tagging, form factor)<br>• UX research (form-factor evidence)<br>• Platform engineering (Procore)<br>• Customer success (Procore and checklist clients) | • 80% of updates reach the PM correctly tagged within 4 hours<br>• PM tag-correction rate falling<br>• Logs accepted with no required fields<br>• Procore sync restored for both clients<br>• Checklists adopted at 3 clients with no foreman form entry |
+| **Later**<br>(6 to 12 mo) | *Bets, not commitments. No people or budget yet.*<br><br>• Once field data is trusted, an executive KPI dashboard will be easy to justify and protect renewals<br>• Once capture is proven, time tracking can be added without friction<br>• A data model migration is worth doing only if tagging depends on it<br>• Including non-Meridian users in the thread (subcontractor portal) will close the group-text gap<br>• Web UI refresh, real-time weather and AI-assisted RFI drafting each need a case tied to the north-star | • Product leadership<br>• Enterprise sales and customer success<br>• Engineering (effort estimates) | • Pilot data showing a trusted field feed<br>• At-risk renewals and negotiations tracked<br>• Retention in the $5M–$50M segment<br>• Each bet reconsidered at the quarterly strategy review |
+
+## Meridian Foundations: win the foreman away from the group text 
+<table width="100%"> <tr> <th width="34%" align="left">🟢 Now<br><sub>0 to 3 months · this quarter</sub></th> <th width="33%" align="left">🔵 Next<br><sub>3 to 6 months</sub></th> <th width="33%" align="left">⚪ Later<br><sub>6 to 12 months · bets, not commitments</sub></th> </tr> <tr> <td valign="top">
+
+<b>Photo markup makes Meridian the faster way to flag issues</b><br> <b>Owner:</b> Product, mobile eng, UX research, customer success<br> <b>Signal:</b> Updates sent via Meridian reach [X]%
+
+<hr> <b>A 4-field daily log gets foremen to finish it every day</b><br> <b>Owner:</b> Product, mobile eng, UX research, customer success<br> <b>Signal:</b> PM no-edit acceptance reaches [Y]% <hr> <b>Schedule alerts bring foremen back most working days</b><br> <b>Owner:</b> Product, mobile eng, UX research, customer success<br> <b>Signal:</b> [X]% of alert opens lead to a capture </td> <td valign="top">
+
+<b>Auto-tagged offline capture</b><br> <b>Owner:</b> Mobile eng, product<br> <b>Signal:</b> 80% tagged, at PM in 4 hrs
+
+<hr> <b>Form-factor decision</b><br> <b>Owner:</b> UX research, mobile eng<br> <b>Signal:</b> Decision backed by test data <hr> <b>Self-writing daily log</b><br> <b>Owner:</b> Product, mobile eng<br> <b>Signal:</b> Logs accepted, zero fields <hr> <b>Procore sync fix (commitment)</b><br> <b>Owner:</b> Platform eng, customer success<br> <b>Signal:</b> Sync restored for 2 clients <hr> <b>Compliance checklists</b><br> <b>Owner:</b> Product, customer success<br> <b>Signal:</b> 3 clients adopt, no new forms </td> <td valign="top">
+
+<b>Executive KPI dashboard</b><br> <b>Owner:</b> Product leadership, sales<br> <b>Signal:</b> Trusted field feed in pilots
+
+<hr> <b>Time-tracking module</b><br> <b>Owner:</b> Product, engineering<br> <b>Signal:</b> No added foreman friction <hr> <b>Subcontractors in the thread</b><br> <b>Owner:</b> Product, customer success<br> <b>Signal:</b> Non-users join the thread <hr> <b>Data model migration</b><br> <b>Owner:</b> Engineering<br> <b>Signal:</b> Engineering proves the need <hr> <b>UI refresh, weather, AI RFIs</b><br> <b>Owner:</b> Product leadership<br> <b>Signal:</b> Case tied to the north-star </td> </tr> </table>
